@@ -11,9 +11,8 @@ public class DeviceController : MonoBehaviour
 
     private List<InputDevice> devices = new List<InputDevice>();
 
-    private InputDevice device;
 
-  
+    private InputDevice device;
    
     void GetDevice()
     {
@@ -41,9 +40,13 @@ public class DeviceController : MonoBehaviour
 
         foreach (var feature in features)
         {
-            Debug.Log(device.name + feature.name + feature.type);
+            Debug.Log(device.name);
         }
-
+        //foreach (var device in devices)
+        //{
+        //    Debug.Log(device.characteristics);
+        //}
+        
         
     }
 }
