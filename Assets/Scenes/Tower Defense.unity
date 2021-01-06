@@ -361,7 +361,7 @@ MonoBehaviour:
   m_RigBaseGameObject: {fileID: 41780122}
   m_CameraFloorOffsetObject: {fileID: 71334503}
   m_CameraGameObject: {fileID: 945922881}
-  m_TrackingOriginMode: 2
+  m_TrackingOriginMode: 1
   m_TrackingSpace: 3
   m_CameraYOffset: 1.36144
 --- !u!4 &41780128
@@ -978,7 +978,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: abcbe4c67607b17458c812bab6d1d78a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  shootRate: 0.001
+  shootRate: 0.4
   links: {fileID: 319709183}
   rechts: {fileID: 1235236998}
   m_shotPrefab: {fileID: 136330, guid: 9a0c3383523899643a8d0661cfaca4e4, type: 3}
