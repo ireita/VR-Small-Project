@@ -7,6 +7,7 @@ using UnityEngine.XR.Interaction.Toolkit;
 public class TimeManipulation : MonoBehaviour
 {
     public XRController rechts;
+    bool ButtonActive;
     private float fixedDeltaTime;
     public AudioSource slowmoinSource;
     public AudioSource slowmooutSource;
@@ -14,27 +15,38 @@ public class TimeManipulation : MonoBehaviour
     public AudioClip slowmoout;
     public InputHelpers.Button ActivationButton;
 
+    private void Start()
+    {
+        // Setting bool for button ispressed checking to false at the start
+        ButtonActive = false;
+    }
+
+
 
     // Update is called once per frame
     void Update()
     {
-        if (CheckIfActivated(rechts))
+        if (CheckIfActivated(rechts) != ButtonActive)
         {
-            if (Time.timeScale == 1.0f)
-
+            if (CheckIfActivated(rechts) == true)
             {
-                Time.timeScale = 0.2f;
-                slowmoinSource.PlayOneShot(slowmoin, 0.9f);
-            }
+                if (Time.timeScale == 1.0f)
 
-            else
-            {
-                Time.timeScale = 1.0f;
-                slowmooutSource.PlayOneShot(slowmoout, 0.9f);
-            }
+                {
+                    Time.timeScale = 0.2f;
+                    slowmoinSource.PlayOneShot(slowmoin, 0.9f);
+                }
+
+                else
+                {
+                    Time.timeScale = 1.0f;
+                    slowmooutSource.PlayOneShot(slowmoout, 0.9f);
+                }
                 // Adjust fixed delta time according to timescale
                 // The fixed delta time will now be 0.02 frames per real-time second
                 Time.fixedDeltaTime = 0.02f * Time.timeScale;
+            }
+            ButtonActive = CheckIfActivated(rechts);
         }
     }
     public bool CheckIfActivated(XRController rechts)

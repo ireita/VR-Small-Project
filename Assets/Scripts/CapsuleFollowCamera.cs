@@ -33,7 +33,7 @@ public class CapsuleFollowCamera : MonoBehaviour
 
         character.height = rig.cameraInRigSpaceHeight;
         Vector3 capsuleCenter = transform.InverseTransformPoint(rig.cameraGameObject.transform.position);
-        character.center = new Vector3(capsuleCenter.x, character.height / 2 + 0.08f, capsuleCenter.z);
+        character.center = new Vector3(capsuleCenter.x, character.height / 2 + 0.08f, capsuleCenter.z-0.1f);
 
 
 
