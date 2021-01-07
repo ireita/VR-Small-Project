@@ -233,7 +233,7 @@ MonoBehaviour:
   _reverseWindTriangles: 0
   _useGravity: 1
   _shareVertices: 0
-  _smoothVertices: 1
+  _smoothVertices: 0
 --- !u!54 &20821356
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -1310,7 +1310,7 @@ MonoBehaviour:
   _reverseWindTriangles: 0
   _useGravity: 1
   _shareVertices: 0
-  _smoothVertices: 1
+  _smoothVertices: 0
 --- !u!54 &787563783
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -2624,7 +2624,7 @@ MonoBehaviour:
   _reverseWindTriangles: 0
   _useGravity: 1
   _shareVertices: 0
-  _smoothVertices: 1
+  _smoothVertices: 0
 --- !u!54 &2003326399
 Rigidbody:
   m_ObjectHideFlags: 0
