@@ -29,7 +29,7 @@ public class EnemyShoot : MonoBehaviour
 
         if (firerate<=0)
         {
-            firerate = 0.2f;
+            firerate = 1.5f;
             Shoot();
         }
     }
